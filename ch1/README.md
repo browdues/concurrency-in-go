@@ -50,9 +50,21 @@ Prev. sections about correctness. Even if this is achieved, there is another cla
 If we ensure that at least one of these conditions is **not** true, we can prevent deadlocks from occuring.
 
 **LIVELOCK**
+That moment when you both move out of the way, but you're in the way of each other, and this dance never ends
 
-**STARVATION**
+These can be harder to spot than deadlocks. Since CPU is active, it appears that work is occuring. Livelocks are a subset of a larger set of problems known as Starvation.
+
+**STARVATION** Any situation where a concurrent process can't get all the resources it needs to perform work.
+
+Referencing the example:  Metrics are a good way for detecting and solving starvation. Log when work is accomplished and then determine if the rate of work is as high as expected.
 
 ### Determining Concurrency Safety
+Humans are involved, so be careful to communicate. For concurrent functions, make sure comments cover the following
+
+mportantly, the comment covers these aspects:
+
+1. Who is responsible for the concurrency?
+2. How is the problem space mapped onto concurrency primitives?
+3. Who is responsible for the synchronization?
 
 ## Simplicity in the Face of Complexity
